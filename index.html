@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Algorithmic Symphony</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Algorithmic Symphony" />
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <meta name="author" content="Tapasya" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Algorithmic Symphony!</h1>
+    </div>
+
+    <div class="algo-description">
+        <h2>Welcome to Algorithmic Symphony: Sorting Algorithms!</h2> <br>
+        <p>Delve into the mesmerizing world where algorithms orchestrate a harmonious arrangement of data. Sorting algorithms, the virtuosos of computational harmony, elegantly arrange elements into a desired sequence, shaping the rhythm of digital melodies.
+            In this symphonic journey, you are invited to witness the mesmerizing performances of various sorting techniques. From the graceful melodies of bubble sort to the swift cadenzas of quick sort, each algorithm conducts a unique symphony, painting
+            a vivid picture of data arrangement. Experience the brilliance of sorting algorithms in real-time as they compose intricate patterns, optimizing the arrangement of elements with every movement. Whether you're a curious explorer or a seasoned
+            conductor of code, Algorithmic Symphony offers a stage to immerse yourself in the artistry of sorting algorithms. Join us as we embark on a musical expedition through sorting algorithms, where every algorithmic note contributes to the symphony
+            of computational harmony!</p>
+        <div id="bubble-description" class="algorithm-description">
+            <h3>Bubble Sort</h3>
+            <p><strong>Approach:</strong> Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</p>
+            <p><strong>Time Complexity:</strong> O(n^2) in the worst and average case. O(n) in the best case when the list is already sorted.</p>
+            <p><strong>Space Complexity:</strong> O(1).</p>
+        </div>
+        <div id="selection-description" class="algorithm-description">
+            <h3>Selection Sort</h3>
+            <p><strong>Approach:</strong> Selection Sort is a simple comparison-based sorting algorithm that divides the input list into two parts: a sorted sublist and an unsorted sublist. It repeatedly selects the smallest element from the unsorted sublist
+                and moves it to the end of the sorted sublist.</p>
+            <p><strong>Time Complexity:</strong> O(n^2) in all cases.</p>
+            <p><strong>Space Complexity:</strong> O(1).</p>
+        </div>
+        <div id="insertion-description" class="algorithm-description">
+            <h3>Insertion Sort</h3>
+            <p><strong>Approach:</strong> Insertion Sort is a simple comparison-based sorting algorithm that builds the final sorted list one element at a time. It iterates through the input list, removing one element from the input data, and then finding
+                the location where it belongs in the sorted list and inserting it there.</p>
+            <p><strong>Time Complexity:</strong> O(n^2) in the worst and average case. O(n) in the best case when the list is already sorted.</p>
+            <p><strong>Space Complexity:</strong> O(1).</p>
+        </div>
+        <div id="merge-description" class="algorithm-description">
+            <h3>Merge Sort</h3>
+            <p><strong>Approach:</strong> Merge Sort is a divide and conquer algorithm that divides the input list into two halves, recursively sorts each half, and then merges the sorted halves to produce the final sorted list.</p>
+            <p><strong>Time Complexity:</strong> O(n log n) in all cases.</p>
+            <p><strong>Space Complexity:</strong> O(n) due to the temporary arrays used in the merging step.</p>
+        </div>
+        <div id="quick-description" class="algorithm-description">
+            <h3>Quick Sort</h3>
+            <p><strong>Approach:</strong> Quick Sort is a comparison-based sorting algorithm that divides the input list into two sublists based on a chosen pivot element, partitions the sublists, and then recursively sorts each sublist.</p>
+            <p><strong>Time Complexity:</strong> O(n log n) on average, O(n^2) in the worst case.</p>
+            <p><strong>Space Complexity:</strong> O(log n) on average, O(n) in the worst case due to recursive calls.</p>
+        </div>
+
+        <div id="heap-description" class="algorithm-description">
+            <h3>Heap Sort</h3>
+            <p><strong>Approach:</strong> Heap Sort is a comparison-based sorting algorithm that builds a binary heap from the input list and then repeatedly extracts the maximum element from the heap and rebuilds the heap until the list is sorted.</p>
+            <p><strong>Time Complexity:</strong> O(n log n) in all cases.</p>
+            <p><strong>Space Complexity:</strong> O(1) as it sorts the list in place.</p>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <h3>Current Array Size: <span id="sizeValue"></span></h3>
+            <input type="range" min="10" max="100" value="20" class="slider" id="sizeSlider" />
+        </div>
+
+        <div class="slider">
+            <h3>
+                Speed: <span id="speedValue"></span> ms
+            </h3>
+            <input type="range" min="1" max="1000" value="55" class="slider" id="speedSlider" />
+        </div>
+    </div>
+
+    <div class="algo-selection-container">
+        <label for="Sorting_Function">Choose an algorithm:</label>
+        <select id="sortingFunction" name="funcList" form="funcForm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+            <option value="heap">Heap Sort</option>
+        </select>
+    </div>
+
+    <div class="sorting-button-container">
+        <button class="button" type="randomizeBtn" onclick="randomizeArray()">
+        Generate new array
+      </button>
+        <button class="button" type="sortButton" onclick="runSort()">
+        Begin Sorting
+      </button>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="myCanvas" width="800" height="400" style="border: 1px solid #c3c3c3">
+        Your browser does not support the canvas element :,(
+      </canvas>
+    </div>
+</body>
+
+</html>
+
+<script src="main.js"></script>
+<script src="sort.js"></script>
