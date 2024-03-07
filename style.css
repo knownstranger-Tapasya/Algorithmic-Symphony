@@ -1,0 +1,119 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    color: #0ef;
+}
+
+.algo-description h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.algo-description p {
+    color: rgb(3, 108, 115)
+}
+
+.algo-description {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    text-align: justify;
+    background-color: #0d0d0d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(11, 215, 215, 0.7);
+}
+
+.algorithm-description {
+    margin-bottom: 20px;
+}
+
+.algorithm-description h3 {
+    color: #0ef;
+    font-size: 1.5em;
+}
+
+.algorithm-description p {
+    color: #6017df;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider {
+    margin: 0 10px;
+}
+
+.slider h3 {
+    color: #6017df;
+    font-size: 1em;
+}
+
+.algo-selection-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.algo-selection-container label {
+    color: #0ef;
+    font-size: 1.2em;
+}
+
+.sorting-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #0ef;
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0b446a;
+}
+
+.canvas-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: auto;
+    border: 1px solid #49e1f2;
+    border-radius: 4px;
+}
